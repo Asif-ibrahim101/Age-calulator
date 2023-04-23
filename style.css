@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Poppins:ital,wght@0,700;1,500&family=Roboto&family=Ubuntu:ital,wght@1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: hsl(0, 0%, 94%);
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .age_calculator_main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        padding-top: 1.8rem;
+        padding: 1.5rem;
+        position: absolute;
+        background-color: hsl(0, 0%, 100%);
+        display: inline-block;
+        width: 550px;
+        height: auto;
+        border-radius: 15px 15px 100px 15px;
+        box-shadow: rgba(230, 230, 235, 0.2) 0px 7px 29px 0px;
+    }
+
+    .age_calculator .block {
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+
+    .block.error {
+        color: hsl(0, 100%, 67%);
+    }
+
+    .age_calculator .block .title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 0 0 0.5rem 0;
+    }
+
+    .age_calculator .block input[type=text] {
+        width: 80px;
+        min-height: 50px;
+        outline: none;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid hsl(0, 5%, 81%);
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        background-color: white;
+    }
+
+    .age_calculator .block input[type=text].red {
+        border: 2px solid hsl(0, 100%, 67%);
+    }
+
+    .age_calculator .block input[type=text]:focus {
+        border: 2px solid black;
+        outline: none;
+        background-color: white;
+    }
+
+    .age_calculator .block .error_text {
+        font-size: 12px;
+        visibility: hidden;
+    }
+
+    .age_calculator .block .error_text.show {
+        font-weight: 600;
+        visibility: visible;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .divider .line {
+        width: 100%;
+        height: 2px;
+        background-color: hsl(0, 0%, 86%);
+    }
+
+    .divider .btn {
+        padding: 1.5rem 1.8rem;
+        border-radius: 50px;
+        border: none;
+        background-color: hsl(259, 100%, 65%);
+        color: hsl(0, 0%, 100%);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .divider .btn i {
+        font-size: 1.5rem;
+    }
+
+    .divider .btn:hover {
+        background-color: hsl(259, 100%, 65%);
+        color: hsl(0, 0%, 100%);
+    }
+
+    .result {
+        padding: 0 1rem 2rem;
+    }
+
+    .result p {
+        font-size: 4.5rem;
+        font-weight: bold;
+        font-family: 'Outfit', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .result p .numbers {
+        color: hsl(259, 100%, 65%);
+        margin-right: 1rem;
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .age_calculator_main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+    }
+
+    .container {
+        padding-top: 2rem;
+        padding-left: 1rem;
+        padding-bottom: 2rem;
+        position: absolute;
+        background-color: hsl(0, 0%, 100%);
+        display: inline-block;
+        width: 350px;
+        height: auto;
+        border-radius: 15px 15px 100px 15px;
+        box-shadow: rgba(230, 230, 235, 0.2) 0px 7px 29px 0px;
+    }
+
+    .age_calculator .block {
+        display: inline-block;
+        /* margin: 0 0.5rem; */
+    }
+
+    .block.error {
+        color: hsl(0, 100%, 67%);
+    }
+
+    .age_calculator{
+        padding-left: 1rem;
+    }
+
+    .age_calculator .block .title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 0 0 0.5rem 0;
+    }
+
+    .age_calculator .block input[type=text] {
+        width: 60px;
+        min-height: 50px;
+        outline: none;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid hsl(0, 5%, 81%);
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        background-color: white;
+        margin: 0 0.2rem;
+    }
+
+    .age_calculator .block input[type=text].red {
+        border: 2px solid hsl(0, 100%, 67%);
+    }
+
+    .age_calculator .block input[type=text]:focus {
+        border: 2px solid black;
+        outline: none;
+        background-color: white;
+    }
+
+    .age_calculator .block .error_text {
+        padding: 0.5rem 0.3rem;
+        font-size: 10px;
+        visibility: hidden;
+    }
+
+    .age_calculator .block .error_text.show {
+        font-weight: 600;
+        visibility: visible;
+    }
+
+    .divider {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2.5rem 0.5rem;
+    }
+
+    .divider .line {
+        width: 100%;
+        height: 2px;
+        background-color: hsl(0, 0%, 86%);
+    }
+
+    .divider .btn {
+        position: absolute;
+        z-index: 2;
+        right: 154px;
+        padding: 1rem 1.2rem;
+        border-radius: 50px;
+        border: none;
+        background-color: hsl(259, 100%, 65%);
+        color: hsl(0, 0%, 100%);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+
+    .divider .btn i {
+        font-size: 1.5rem;
+    }
+
+    .result {
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem 2rem;
+    }
+
+    .result p {
+        font-size: 3.2rem;
+        font-weight: bold;
+        font-family: 'Outfit', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .result p .numbers {
+        color: hsl(259, 100%, 65%);
+        margin-right: 1rem;
+    }
+}

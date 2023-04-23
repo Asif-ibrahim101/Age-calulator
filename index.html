@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/2552c2169d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="age_calculator_main">
+    <div class="container">
+      <form action="" class="age_calculator">
+        <div id="block1" class="block">
+          <p class="title">Day</p>
+          <input type="text" name="date" id="date" placeholder="dd" required="required" minlength="1" maxlength="2" />
+          <div>
+            <p id="error_text" class="error_text">This field is required</p>
+          </div>
+        </div>
+
+        <div id="block2" class="block">
+          <p class="title">Month</p>
+          <input type="text" name="month" id="month" placeholder="mm" required="required" minlength="1" maxlength="2" />
+          <div>
+            <p id="error_text2" class="error_text">This field is required</p>
+          </div>
+        </div>
+
+        <div id="block3" class="block">
+          <p class="title">Year</p>
+          <input type="text" name="year" id="year" placeholder="yy" required="required" minlength="1" maxlength="4" />
+          <div>
+            <p id="error_text3" class="error_text">This field is required</p>
+          </div>
+        </div>
+      </form>
+
+      <div class="divider">
+        <div class="line"></div>
+        <button onclick="age()" class="btn">
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+
+      <div class="result">
+        <p><span id="Years" class="numbers">_ _</span>Years</p>
+        <p><span id="Months" class="numbers">_ _</span>Months</p>
+        <p><span id="Days" class="numbers">_ _</span>Days</p>
+      </div>
+
+      <div id="age"></div>
+    </div>
+  </div>
+
+  <!-- <script src="https://kit.fontawesome.com/2552c2169d.js" crossorigin="anonymous"></script>s -->
+  <script src="index.js"></script>
+</body>
+
+</html>
